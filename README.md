@@ -1,0 +1,2 @@
+# codemind-c
+codinng
