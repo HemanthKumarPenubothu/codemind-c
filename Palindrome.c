@@ -8,7 +8,7 @@ int main()
     {
         r=n%10;
         rev=rev*10+r;
-        n=n/10;
+        n/=10;
     }
     if(rev==j)
     printf("True");
