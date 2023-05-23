@@ -1,6 +1,4 @@
 #include<stdio.h>
-#include<math.h>
-#include<stdlib.h>
 int main()
 {
     int n,i,j,pre,post,rev,rev1,r,r1,m,m1;
