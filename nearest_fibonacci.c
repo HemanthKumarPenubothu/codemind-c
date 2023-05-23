@@ -1,31 +1,51 @@
 #include<stdio.h>
 int main()
 {
-    int a=0,b=1,n,sm,lg,smc,lgc,i=0,c=0;
+    int n,a=0,b=1,c,s,pre,post;
     scanf("%d",&n);
+    s=n;
+    int s1=n;
     while(1)
     {
-    	i++;
-    	
-        if(a<n){
-        	sm=a;
-        	
-		}
-		if(a>n){
-			lg=a;
-			
-			break;
-		}
         c=a+b;
-        a=b;
-        b=c;
+        if(c==s)
+        {
+            post=s;
+            break;
+        }
+        else if(c<s)
+        {
+            a=b;
+            b=c;
+        }
+        else
+        {
+            s++;
+        }
     }
-    if((n-sm)==(lg-n)){
-        printf("%d %d",sm,lg);
+    int x=0,y=1,z;
+    while(1)
+    {
+        z=x+y;
+        if(y==s1)
+        {
+            pre=s1;
+            break;
+        }
+        else if(z<s1)
+        {
+            x=y;
+            y=z;
+        }
+        else
+        {
+            s1--;
+        }
     }
-    else if(n-sm>lg-n){
-    	printf("%d",lg);
-	}
-	else
-	printf("%d",sm);
+    if(n-pre>post-n)
+    printf("%d",post);
+    else if(n-pre<post-n)
+    printf("%d",pre);
+    else if(n-pre==post-n)
+    printf("%d %d",pre,post);
 }
