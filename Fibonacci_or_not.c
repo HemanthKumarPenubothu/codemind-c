@@ -1,25 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int n,a=0,b=1,c,co=0,i;
+    int n,c;
     scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int a=0,b=1;
+    for(int i=1;i<=n;i++)
     {
+        
         c=a+b;
-        if(c==n)
+        if(a==n)
         {
-            co++;
-            break;
+            printf("True");
+            return 0;
         }
         a=b;
         b=c;
     }
-    if(co==0)
-    {
-        printf("False");
-    }
-    else
-    {
-        printf("True");
-    }
+    printf("False");
 }
