@@ -22,8 +22,8 @@ int main()
             s++;
         }
     }
-    if(s==c)
-    printf("True");
-    else
+    if(s!=c)
     printf("False");
+    else
+    printf("True");
 }
