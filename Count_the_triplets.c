@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j,arr[100],k,p,q=0,z=0,c=0;
+        scanf("%d",&n);
+        for(i=0;i<n;i++)
+        {
+        scanf("%d",&k);
+            for(j=0;j<k;j++)
+            {
+                scanf("%d",&arr[j]);
+            }
+            c=0;
+            for(j=0;j<k;j++)
+            {
+                for(p=0;p<k;p++)
+                {
+                    for(q=0;q<k;q++)
+                    {
+                        if(j!=q && j!=p && q!=p)
+                        {
+                            if(arr[j]+arr[p]==arr[q])
+                            {
+                                c+=1;
+                            }
+                        }
+                    }
+                }
+            }
+                if(c>0)
+                {
+                    printf("%d
+",c/2);
+                }
+                else
+                {
+                    printf("-1");
+                    printf("
+");
+                }
+    }
+}
