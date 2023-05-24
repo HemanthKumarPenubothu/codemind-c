@@ -1,35 +1,35 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,i,j,c,min;
     scanf("%d",&n);
-    int a[n],b,c,d,e,f,max=0,i;
-    for(b=0;b<n;b++)
+    int a[n];
+    for(i=0;i<n;i++)
     {
-        scanf("%d",&a[b]);
+        scanf("%d",&a[i]);
     }
-    max=a[i];
-    for(c=0;c<n;c++)
+    min=a[0];
+    for(i=1;i<n;i++)
     {
-        if(a[c]<max)
+        if(min>a[i])
         {
-            max=a[c];
+            min=a[i];
         }
     }
-          for(max;max>0;max--)
+    for(j=min;j>=1;j--)
+    {
+        c=0;
+        for(i=0;i<n;i++)
+      {
+          if(a[i]%j==0)
           {
-              i=0;
-              for(d=0;d<n;d++)
-              {
-                  if(a[d]%max==0)
-                  {
-                      i++;
-                  }
-              }
-              if(i==n)
-              {
-                 printf("%d",max);
-                  break;
-              }
+              c++;
           }
-}  
+      }
+      if(c==n)
+      {
+          printf("%d",j);
+          break;
+}
+}
+}
