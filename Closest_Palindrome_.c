@@ -1,48 +1,55 @@
 #include<stdio.h>
+int pal(int n)
+{
+    int r,rv=0,t=n;
+    while(n!=0)
+    {
+        r=n%10;
+        rv=rv*10+r;
+        n=n/10;
+    }
+    if(rv==t)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
 int main()
 {
-    int n,i,j,pre,post,rev,rev1,r,r1,m,m1;
+    int n,f,b;
     scanf("%d",&n);
-    int f=n;
-    int f1=n;
-    while(n>0)
+    for(int i=n+1;;i++)
     {
-        rev=0;
-        m=--n;
-        int s=m;
-        while(m>0)
+        if(pal(i))
         {
-            r=m%10;
-            rev=rev*10+r;
-            m=m/10;
-        }
-        if(rev==s)
-        {
-            pre=rev;
+            f=i;
             break;
         }
     }
-    while(f>0)
+    for(int i=n-1;;i--)
     {
-        rev1=0;
-        m1=++f;
-        int s1=m1;
-        while(m1>0)
+        if(pal(i))
         {
-            r1=m1%10;
-            rev1=rev1*10+r1;
-            m1=m1/10;
-        }
-        if(rev1==s1)
-        {
-            post=rev1;
+            b=i;
             break;
         }
     }
-    if(f1-pre>post-f1)
-    printf("%d",post);
-    else if(f1-pre<post-f1)
-    printf("%d",pre);
-    else if(f1-pre==post-f1)
-    printf("%d %d",pre,post);
+    int d1=f-n;
+    int d2=n-b;
+    if(d1<d2)
+    {
+        printf("%d",f);
+    }
+    else if(d2<d1)
+    {
+        printf("%d",b);
+    }
+    else
+    {
+        printf("%d %d",b,f);
+    }
+    
 }
