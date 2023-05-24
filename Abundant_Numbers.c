@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,s=0;
+    int n,s=0;
     scanf("%d",&n);
-    for(i=1;i<n;i++)
+    for(int i=1;i<n;i++)
     {
         if(n%i==0)
         {
@@ -11,7 +11,11 @@ int main()
         }
     }
     if(s>n)
-    printf("True");
+    {
+        printf("True");
+    }
     else
-    printf("False");
+    {
+        printf("False");
+    }
 }
