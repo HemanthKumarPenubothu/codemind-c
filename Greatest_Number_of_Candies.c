@@ -3,30 +3,30 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    int a[n],i,j,c;
+    int a[n],i,j,co;
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
-    int d;
-    scanf("%d",&d);
+    int c;
+    scanf("%d",&c);
     for(i=0;i<n;i++)
     {
-        c=0;
-       for(j=0;j<n;j++)
-       {
-           if(a[i]+d>=a[j])
-           {
-               c++;
-           }
-       }
-       if(c==n)
-       {
-           printf("True ");
-       }
-       else
-       {
-           printf("False ");
-       }
+      co=0;
+      for(j=0;j<n;j++)
+      {
+          if(a[i]+c>=a[j])
+          {
+              co++;
+          }
+      }
+      if(co==n)
+      {
+          printf("True ");
+      }
+      else
+      {
+          printf("False ");
+      }
     }
 }
